@@ -644,6 +644,40 @@ footer {
   transition: 0.3s ease;
 }
 
+.contact-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(150px, 1fr));
+  gap: 16px;
+  align-content: start;
+}
+
+.contact-pill {
+  min-height: 58px;
+  padding: 14px 22px;
+  border: 1px solid var(--text);
+  border-radius: 999px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 0.95rem;
+  font-weight: 500;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.contact-pill:hover {
+  background: var(--text);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
 .contact-card:hover {
   background: rgba(162, 96, 71, 0.06);
 }
@@ -678,6 +712,9 @@ footer {
 @media (max-width: 900px) {
   .achievement-grid,
 .education-item,
+  .contact-buttons {
+  grid-template-columns: 1fr;
+}
 .contact-grid {
   grid-template-columns: 1fr;
 }
