@@ -485,8 +485,210 @@ footer {
   transform: translateY(0);
 }
 
+/* =========================
+   ACHIEVEMENTS
+========================= */
+
+.section-intro {
+  max-width: 720px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  margin-top: -20px;
+  margin-bottom: 48px;
+}
+
+.achievement-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.achievement-card {
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.18);
+  padding: 34px;
+  min-height: 210px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.35s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.achievement-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 38px;
+}
+
+.achievement-icon {
+  width: 52px;
+  height: 52px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+
+.achievement-index {
+  letter-spacing: 0.18em;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.achievement-card h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.55rem;
+  margin-bottom: 8px;
+}
+
+.achievement-card p {
+  color: var(--muted);
+}
+
+
+/* =========================
+   EDUCATION
+========================= */
+
+.education-heading {
+  margin-bottom: 55px;
+}
+
+.education-list {
+  border-top: 1px solid var(--border);
+}
+
+.education-item {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 50px;
+  align-items: center;
+  padding: 48px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.education-date {
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.education-info h3 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.education-info p {
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+  text-align: left;
+}
+
+.contact-heading {
+  max-width: 900px;
+  margin: 10px 0 55px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(3.5rem, 7vw, 6.5rem);
+  line-height: 0.98;
+  font-weight: 500;
+}
+
+.contact-heading span {
+  color: var(--accent);
+  font-style: italic;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 65px;
+  align-items: stretch;
+}
+
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+}
+
+.contact-card {
+  padding: 28px;
+  min-height: 145px;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  transition: 0.3s ease;
+}
+
+.contact-card:hover {
+  background: rgba(162, 96, 71, 0.06);
+}
+
+.contact-small {
+  font-size: 0.76rem;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.contact-card strong {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.contact-message {
+  border-top: 1px solid var(--border);
+  padding-top: 28px;
+}
+
+.contact-message h3 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  line-height: 1.2;
+  font-weight: 500;
+  max-width: 600px;
+  margin: 20px 0 30px;
+}
+
 /* responsive */
 @media (max-width: 900px) {
+  .achievement-grid,
+.education-item,
+.contact-grid {
+  grid-template-columns: 1fr;
+}
+
+.education-item {
+  gap: 16px;
+}
+
+.contact-cards {
+  grid-template-columns: 1fr;
+}
   .nav-links {
     display: none;
   }
