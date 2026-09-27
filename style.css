@@ -92,15 +92,26 @@ a {
 }
 
 .hero {
-  min-height: 88vh;
+  min-height: 82vh;
   display: grid;
   place-items: center;
   text-align: center;
-  padding: 90px 20px;
+  padding: 70px 20px 90px;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-inner {
-  max-width: 940px;
+  max-width: 980px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-accent {
+  color: var(--accent);
+  font-size: 1.6rem;
+  margin: 14px 0 2px;
+  animation: floatAccent 3s ease-in-out infinite;
 }
 
 .monogram {
@@ -129,10 +140,10 @@ a {
 
 .hero h1 {
   font-family: "Playfair Display", serif;
-  font-size: clamp(4rem, 10vw, 7.7rem);
+  font-size: clamp(4rem, 10vw, 7.5rem);
   line-height: 0.98;
   font-weight: 500;
-  margin: 18px 0 24px;
+  margin: 12px 0 22px;
 }
 
 .hero .hello {
@@ -147,10 +158,33 @@ a {
 }
 
 .hero-copy {
-  max-width: 720px;
+  max-width: 680px;
   margin: 0 auto;
   font-size: 1.08rem;
   color: #3f3833;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: rgba(162, 96, 71, 0.08);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -52%);
+  filter: blur(2px);
+}
+
+@keyframes floatAccent {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
 }
 
 .hero-actions {
