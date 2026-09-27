@@ -742,11 +742,9 @@ footer {
 .contact-links a {
   color: var(--text);
   font-weight: 500;
-  min-width: 125px;
-  padding: 12px 22px;
+  padding: 10px 18px;
   border: 1px solid var(--text);
   border-radius: 999px;
-  text-align: center;
   transition: all 0.3s ease;
 }
 
