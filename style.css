@@ -513,12 +513,59 @@ footer {
 .achievement-icon {
   width: 52px;
   height: 52px;
-  border: 1px solid var(--border);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.medal-icon .medal-circle {
+  position: absolute;
+  top: 2px;
+  width: 27px;
+  height: 27px;
+  border: 2px solid var(--accent);
   border-radius: 50%;
-  display: grid;
-  place-items: center;
-  color: var(--accent);
-  font-size: 1.1rem;
+}
+
+.medal-icon .medal-circle::after {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: var(--accent);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.medal-icon .medal-ribbons {
+  position: absolute;
+  top: 27px;
+  width: 22px;
+  height: 19px;
+}
+
+.medal-icon .medal-ribbons::before,
+.medal-icon .medal-ribbons::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 18px;
+  background: var(--accent);
+}
+
+.medal-icon .medal-ribbons::before {
+  left: 2px;
+  transform: rotate(12deg);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 75%, 0 100%);
+}
+
+.medal-icon .medal-ribbons::after {
+  right: 2px;
+  transform: rotate(-12deg);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 75%, 0 100%);
 }
 
 .achievement-index {
